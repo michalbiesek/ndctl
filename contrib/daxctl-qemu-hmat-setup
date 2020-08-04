@@ -34,8 +34,6 @@ cat <<EOF > hmat.dsl
                           Length : 00000028
            Flags (decoded below) : 0003
 Processor Proximity Domain Valid : 1
-   Memory Proximity Domain Valid : 1
-                Reservation Hint : 0
                        Reserved1 : 0000
       Processor Proximity Domain : 00000000
          Memory Proximity Domain : 00000000
@@ -48,8 +46,6 @@ Processor Proximity Domain Valid : 1
                           Length : 00000028
            Flags (decoded below) : 0003
 Processor Proximity Domain Valid : 1
-   Memory Proximity Domain Valid : 1
-                Reservation Hint : 0
                        Reserved1 : 0000
       Processor Proximity Domain : 00000000
          Memory Proximity Domain : 00000000
@@ -67,8 +63,6 @@ cat <<EOF >> hmat.dsl
                           Length : 00000028
            Flags (decoded below) : 0003
 Processor Proximity Domain Valid : 1
-   Memory Proximity Domain Valid : 1
-                Reservation Hint : 0
                        Reserved1 : 0000
       Processor Proximity Domain : $(printf "%08x" $((i % INITIATORS)))
          Memory Proximity Domain : $(printf "%08x" "${i}")
