@@ -38,8 +38,8 @@ Processor Proximity Domain Valid : 1
       Processor Proximity Domain : 00000000
          Memory Proximity Domain : 00000000
                        Reserved2 : 00000000
-     Physical Address Range Base : 0000000000000000
-     Physical Address Range Size : 00000000000A0000
+                       Reserved3 : 0000000000000000
+                       Reserved4 : 00000000000A0000
 
                   Structure Type : 0000 [Memory Proximity Domain Attributes ]
                         Reserved : 0000
@@ -50,8 +50,8 @@ Processor Proximity Domain Valid : 1
       Processor Proximity Domain : 00000000
          Memory Proximity Domain : 00000000
                        Reserved2 : 00000000
-     Physical Address Range Base : 0000000000100000
-     Physical Address Range Size : 0000000007F00000
+                       Reserved3 : 0000000000100000
+                       Reserved4 : 0000000007F00000
 EOF
 
 for i in $(seq 1 $((TARGETS - 1))); do
@@ -67,8 +67,8 @@ Processor Proximity Domain Valid : 1
       Processor Proximity Domain : $(printf "%08x" $((i % INITIATORS)))
          Memory Proximity Domain : $(printf "%08x" "${i}")
                        Reserved2 : 00000000
-     Physical Address Range Base : ${BASE}
-     Physical Address Range Size : 0000000008000000
+                       Reserved3 : ${BASE}
+                       Reserved4 : 0000000008000000
 EOF
 done
 
